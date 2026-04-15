@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './About.css'
 
 const About = () => {
+  const [photoError, setPhotoError] = useState(false)
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -26,7 +28,16 @@ const About = () => {
           >
             <div className="image-frame">
               <div className="image-placeholder">
-                <span>PK</span>
+                {!photoError ? (
+                  <img
+                    src="/profile.jpeg"
+                    alt="Praveen Vajrapu"
+                    className="profile-image"
+                    onError={() => setPhotoError(true)}
+                  />
+                ) : (
+                  <span>PV</span>
+                )}
               </div>
               <div className="frame-decoration"></div>
             </div>
@@ -39,37 +50,29 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3>AI Engineer & Innovator</h3>
+            <h3>Praveen Vajrapu - B.Tech Graduate (AI & Data Science)</h3>
             <p>
-              I am a passionate AI Engineer specializing in Machine Learning, Deep Learning, 
-              and Natural Language Processing. With a strong foundation in computer science 
-              and hands-on experience in building intelligent systems, I thrive on solving 
-              complex problems through innovative AI solutions.
+              I am a recent B.Tech graduate in AI and Data Science, with hands-on skills in full-stack development, machine learning, and cloud technologies. I enjoy building end-to-end applications that combine solid frontend and backend engineering with intelligent features.
             </p>
             <p>
-              My journey in artificial intelligence has been driven by curiosity and a 
-              commitment to creating technology that makes a meaningful impact. I have 
-              worked on diverse projects ranging from computer vision applications to 
-              advanced NLP models, always pushing the boundaries of what's possible.
+              My stack includes React, JavaScript, Python, SQL, Django/Flask, and AWS services like Lambda, API Gateway, DynamoDB, and Amplify. I focus on writing clean, practical solutions and continuously improving through projects and learning.
             </p>
             <p>
-              Beyond coding, I am enthusiastic about staying at the forefront of AI research, 
-              contributing to open-source projects, and sharing knowledge with the community. 
-              I believe in the power of AI to transform industries and improve lives.
+              I am actively looking for entry-level opportunities where I can contribute as a software engineer in full-stack, ML, or cloud-focused roles.
             </p>
 
             <div className="about-stats">
               <div className="stat-item">
-                <h4>3+</h4>
-                <p>Years Experience</p>
+                <h4>Fresher</h4>
+                <p>Career Stage</p>
               </div>
               <div className="stat-item">
-                <h4>15+</h4>
+                <h4>3+</h4>
                 <p>Projects Completed</p>
               </div>
               <div className="stat-item">
-                <h4>10+</h4>
-                <p>Technologies</p>
+                <h4>3</h4>
+                <p>Core Domains</p>
               </div>
             </div>
 

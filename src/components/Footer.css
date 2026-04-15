@@ -1,7 +1,7 @@
 .footer {
-  background: var(--gradient-1);
+  background: rgba(10, 14, 30, 0.7);
   padding: 60px 5% 30px;
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-top: 1px solid var(--border);
 }
 
 .footer-content {
@@ -10,7 +10,7 @@
   gap: 40px;
   margin-bottom: 40px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-left,
@@ -23,29 +23,28 @@
 
 .footer-logo {
   font-size: 2rem;
-  font-weight: 900;
-  font-family: 'Playfair Display', serif;
-  background: var(--gradient-gold);
+  font-weight: 700;
+  background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .footer-logo span {
-  color: var(--gold-accent);
+  color: var(--secondary);
 }
 
 .footer-left p,
 .footer-center p,
 .footer-right p {
-  color: rgba(248, 249, 250, 0.7);
+  color: var(--muted);
   line-height: 1.6;
 }
 
 .footer-quote {
   font-style: italic;
   font-size: 1.1rem;
-  color: var(--light-gold) !important;
+  color: var(--secondary) !important;
   text-align: center;
 }
 
@@ -55,14 +54,14 @@
 }
 
 .footer-email {
-  color: var(--gold-accent);
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .footer-email:hover {
-  color: var(--light-gold);
+  color: var(--secondary);
   transform: translateX(-5px);
 }
 
@@ -71,7 +70,7 @@
 }
 
 .footer-bottom p {
-  color: rgba(248, 249, 250, 0.6);
+  color: var(--muted);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
@@ -91,10 +90,16 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 42px 1rem 22px;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
     text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .footer-right {
@@ -104,6 +109,11 @@
 
   .footer-bottom p {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
+    font-size: 0.82rem;
+  }
+
+  .footer-email {
+    overflow-wrap: anywhere;
   }
 }

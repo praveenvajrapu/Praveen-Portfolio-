@@ -1,24 +1,21 @@
 .education {
-  background: var(--gradient-1);
+  background: transparent;
 }
 
 .education-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 40px;
+  gap: 20px;
 }
 
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
 }
 
 .education-item {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 25px;
-  align-items: start;
+  display: block;
 }
 
 .education-icon {
@@ -35,14 +32,14 @@
 }
 
 .education-details h3 {
-  font-size: 1.4rem;
-  color: var(--gold-accent);
+  font-size: 1.2rem;
+  color: var(--text);
   margin-bottom: 8px;
 }
 
 .education-details h4 {
-  font-size: 1.1rem;
-  color: var(--soft-white);
+  font-size: 1rem;
+  color: var(--muted);
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -50,11 +47,11 @@
 .education-details .period {
   display: inline-block;
   padding: 5px 15px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid var(--gold-accent);
+  background: rgba(122, 140, 255, 0.12);
+  border: 1px solid rgba(122, 140, 255, 0.5);
   border-radius: 20px;
   font-size: 0.85rem;
-  color: var(--light-gold);
+  color: var(--text);
   margin-bottom: 15px;
 }
 
@@ -74,59 +71,86 @@
   position: relative;
   padding-left: 25px;
   margin-bottom: 10px;
-  color: rgba(248, 249, 250, 0.85);
+  color: var(--muted);
 }
 
 .education-details .achievements li::before {
-  content: '◆';
+  content: "◆";
   position: absolute;
   left: 0;
-  color: var(--gold-accent);
+  color: var(--secondary);
 }
 
 .certifications {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
+  position: relative;
+  top: 0;
+  height: auto;
+  background: linear-gradient(160deg, rgba(18, 25, 54, 0.88), rgba(13, 20, 45, 0.82));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.3rem;
+  box-shadow: var(--glow);
 }
 
 .cert-header {
-  display: flex;
+  margin-bottom: 0.9rem;
+}
+
+.certifications h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.cert-header p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cert-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.cert-card {
+  border: 1px solid rgba(122, 140, 255, 0.35);
+  border-radius: 14px;
+  padding: 0.9rem;
+  background: rgba(122, 140, 255, 0.07);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(46, 230, 214, 0.6);
+  background: rgba(46, 230, 214, 0.1);
+}
+
+.cert-badge {
+  display: inline-flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+  justify-content: center;
+  min-width: 48px;
+  height: 24px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0b1226;
+  background: var(--gradient-main);
+  margin-bottom: 0.4rem;
 }
 
-.cert-icon {
-  font-size: 2rem;
-  color: var(--gold-accent);
+.cert-card h4 {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
-.cert-header h3 {
-  font-size: 1.8rem;
-  color: var(--gold-accent);
-}
-
-.cert-list {
-  list-style: none;
-  padding: 0;
-}
-
-.cert-list li {
-  padding: 15px;
-  margin-bottom: 12px;
-  background: rgba(212, 175, 55, 0.05);
-  border-left: 3px solid var(--gold-accent);
-  color: rgba(248, 249, 250, 0.9);
-  transition: all 0.3s ease;
-  border-radius: 5px;
-}
-
-.cert-list li:hover {
-  background: rgba(212, 175, 55, 0.1);
-  transform: translateX(5px);
+.cert-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 968px) {
@@ -141,14 +165,31 @@
 }
 
 @media (max-width: 600px) {
-  .education-item {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .education-details h3 {
+    font-size: 1.05rem;
   }
 
-  .education-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
+  .education-details h4 {
+    font-size: 0.92rem;
+  }
+
+  .education-details .achievements li {
+    font-size: 0.9rem;
+  }
+
+  .certifications {
+    padding: 1rem;
+  }
+
+  .cert-card {
+    padding: 0.72rem;
+  }
+
+  .cert-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .cert-card p {
+    font-size: 0.82rem;
   }
 }

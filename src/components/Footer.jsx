@@ -22,15 +22,15 @@ const Footer = () => {
 
           <div className="footer-right">
             <p>Available for freelance opportunities</p>
-            <a href="mailto:praveen@example.com" className="footer-email">
-              praveen@example.com
+            <a href="mailto:Praveenvajrapu02@gmail.com" className="footer-email">
+              Praveenvajrapu02@gmail.com
             </a>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>
-            © {currentYear} Praveen Kumar. Designed & Built with <FaHeart className="heart" /> using React & Vite
+            © {currentYear} Praveen Vajrapu. Designed & Built with <FaHeart className="heart" /> using React & Vite
           </p>
         </div>
       </div>

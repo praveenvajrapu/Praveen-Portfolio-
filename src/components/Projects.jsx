@@ -1,60 +1,8 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import './Projects.css'
+import React from 'react';
+import { motion } from 'framer-motion';
+import './Projects.css';
 
 const Projects = () => {
-  const projects = [
-    {
-      title: 'AI-Powered Chatbot',
-      description: 'Developed an intelligent conversational AI using transformer models and NLP techniques. Achieved 94% accuracy in intent classification with support for multi-turn conversations.',
-      tech: ['Python', 'TensorFlow', 'BERT', 'FastAPI', 'React'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'NLP'
-    },
-    {
-      title: 'Computer Vision System',
-      description: 'Built a real-time object detection and tracking system using YOLO and deep learning. Deployed on edge devices for industrial quality control applications.',
-      tech: ['PyTorch', 'OpenCV', 'YOLO', 'Docker', 'AWS'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'Computer Vision'
-    },
-    {
-      title: 'Sentiment Analysis Platform',
-      description: 'Created a comprehensive sentiment analysis tool for social media monitoring. Processes 10K+ tweets per minute with real-time sentiment visualization dashboards.',
-      tech: ['Python', 'scikit-learn', 'MongoDB', 'React', 'D3.js'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'NLP'
-    },
-    {
-      title: 'Recommendation Engine',
-      description: 'Designed and implemented a collaborative filtering recommendation system using matrix factorization and deep learning. Improved user engagement by 45%.',
-      tech: ['Python', 'TensorFlow', 'Redis', 'PostgreSQL', 'Flask'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'ML'
-    },
-    {
-      title: 'Fraud Detection System',
-      description: 'Developed an anomaly detection system using ensemble learning and neural networks. Achieved 98% accuracy in detecting fraudulent transactions in real-time.',
-      tech: ['Python', 'XGBoost', 'Keras', 'Apache Kafka', 'Docker'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'ML'
-    },
-    {
-      title: 'Image Generation AI',
-      description: 'Built a generative AI model for creating high-quality images from text descriptions using GANs and diffusion models. Generated 50K+ unique images.',
-      tech: ['PyTorch', 'Stable Diffusion', 'CUDA', 'FastAPI', 'Vue.js'],
-      github: 'https://github.com',
-      live: 'https://demo.com',
-      category: 'Generative AI'
-    }
-  ]
-
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -65,43 +13,60 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Featured Projects
+          Projects
         </motion.h2>
-
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="project-card card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="project-category">{project.category}</div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              
-              <div className="project-tech">
-                {project.tech.map((tech, i) => (
-                  <span key={i} className="tech-tag">{tech}</span>
-                ))}
-              </div>
-
-              <div className="project-links">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                  <FaGithub /> Code
-                </a>
-                <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-              </div>
-            </motion.div>
-          ))}
+          <div className="project-card card">
+            <h3>AI-Powered Serverless Diagramming Tool</h3>
+            <p><b>Role:</b> AWS Cloud Management</p>
+            <ul>
+              <li>Built a serverless web app that generates ER, UML, and flowcharts from natural language prompts using DeepSeek LLM.</li>
+              <li>Implemented backend using AWS Lambda, API Gateway, and DynamoDB with sub-2s response time.</li>
+              <li>Deployed responsive React.js frontend using Tailwind CSS and AWS Amplify (CI/CD).</li>
+            </ul>
+            <span className="project-period">May 2024 – Jul 2024</span>
+            <div className="project-links">
+              <a
+                href="https://github.com/praveenvajrapu/VizCraft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
+          <div className="project-card card">
+            <h3>House Price Prediction (Machine Learning)</h3>
+            <p><b>Role:</b> Data Scientist</p>
+            <ul>
+              <li>Built ML model to predict house prices using Linear Regression and Random Forest.</li>
+              <li>Processed and cleaned housing datasets; performed feature engineering and visualization.</li>
+              <li>Evaluated model accuracy using RMSE and R2 metrics.</li>
+            </ul>
+          </div>
+          <div className="project-card card">
+            <h3>Online Leave Management System using Python</h3>
+            <p><b>Role:</b> Frontend Developer</p>
+            <ul>
+              <li>Designed responsive UI using HTML, CSS, Bootstrap, and Django templates.</li>
+              <li>Created user-friendly dashboards and forms for employees and admins.</li>
+            </ul>
+            <div className="project-links">
+              <a
+                href="https://github.com/praveenvajrapu/Employee-Leave-Management-System"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View GitHub
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

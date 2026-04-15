@@ -44,8 +44,8 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2>AI Engineer & Machine Learning Specialist</h2>
-          <p className="tagline">Transforming Ideas into Intelligent Solutions</p>
+          <h2>Full-Stack Developer | ML Engineer | Cloud Enthusiast</h2>
+          <p className="tagline">Building modern apps with intelligence and scale</p>
         </motion.div>
 
         <motion.p
@@ -54,9 +54,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Crafting cutting-edge AI solutions with expertise in Machine Learning, 
-          Deep Learning, and Natural Language Processing. Passionate about building 
-          intelligent systems that make a difference.
+          B.Tech graduate in AI and Data Science with practical experience in full-stack
+          development, machine learning, and AWS cloud services. Focused on shipping
+          reliable products that solve real-world problems.
         </motion.p>
 
         <motion.div
@@ -79,13 +79,13 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://github.com/praveenvajrapu" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://linkedin.com/in/praveenvajrapu" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaLinkedin />
           </a>
-          <a href="mailto:praveen@example.com" className="social-icon">
+          <a href="mailto:Praveenvajrapu02@gmail.com" className="social-icon">
             <FaEnvelope />
           </a>
           <a href="/resume.pdf" download className="social-icon">

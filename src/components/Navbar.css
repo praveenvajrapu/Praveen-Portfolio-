@@ -3,16 +3,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 5%;
+  padding: 16px 6%;
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(10, 25, 41, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-  padding: 15px 5%;
+  background: rgba(10, 15, 33, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(4, 8, 20, 0.55);
+  border-bottom: 1px solid rgba(122, 140, 255, 0.25);
 }
 
 .nav-container {
@@ -24,22 +24,21 @@
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 900;
-  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .logo-text {
-  background: var(--gradient-gold);
+  background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .logo-dot {
-  color: var(--gold-accent);
-  font-size: 2rem;
+  color: var(--secondary);
+  font-size: 1.8rem;
 }
 
 .nav-menu {
@@ -49,28 +48,29 @@
 }
 
 .nav-link {
-  color: var(--soft-white);
+  color: var(--muted);
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gold-accent);
+  border-radius: 999px;
+  background: var(--gradient-main);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--gold-accent);
+  color: var(--text);
 }
 
 .nav-link:hover::after,
@@ -88,7 +88,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: var(--gold-accent);
+  background: var(--secondary);
   transition: all 0.3s ease;
 }
 
@@ -105,23 +105,31 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 14px 1rem;
+  }
+
+  .logo {
+    font-size: 1.35rem;
+  }
+
   .hamburger {
     display: flex;
   }
 
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 64px;
     right: -100%;
-    width: 70%;
-    height: calc(100vh - 70px);
-    background: rgba(10, 25, 41, 0.98);
-    backdrop-filter: blur(10px);
+    width: min(78%, 320px);
+    height: calc(100vh - 64px);
+    background: rgba(8, 12, 28, 0.95);
+    backdrop-filter: blur(16px);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 0;
     transition: right 0.3s ease;
-    border-left: 1px solid rgba(212, 175, 55, 0.2);
+    border-left: 1px solid rgba(122, 140, 255, 0.3);
   }
 
   .nav-menu.active {
@@ -129,6 +137,17 @@
   }
 
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-menu {
+    width: 100%;
+    border-left: none;
+  }
+
+  .nav-container {
+    gap: 12px;
   }
 }
