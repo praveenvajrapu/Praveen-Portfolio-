@@ -1,0 +1,154 @@
+.education {
+  background: var(--gradient-1);
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.education-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-gold);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--navy-blue);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.education-details h3 {
+  font-size: 1.4rem;
+  color: var(--gold-accent);
+  margin-bottom: 8px;
+}
+
+.education-details h4 {
+  font-size: 1.1rem;
+  color: var(--soft-white);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.education-details .period {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold-accent);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--light-gold);
+  margin-bottom: 15px;
+}
+
+.education-details p {
+  color: rgba(248, 249, 250, 0.8);
+  line-height: 1.7;
+  margin: 15px 0;
+}
+
+.education-details .achievements {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.education-details .achievements li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: rgba(248, 249, 250, 0.85);
+}
+
+.education-details .achievements li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--gold-accent);
+}
+
+.certifications {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.cert-icon {
+  font-size: 2rem;
+  color: var(--gold-accent);
+}
+
+.cert-header h3 {
+  font-size: 1.8rem;
+  color: var(--gold-accent);
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cert-list li {
+  padding: 15px;
+  margin-bottom: 12px;
+  background: rgba(212, 175, 55, 0.05);
+  border-left: 3px solid var(--gold-accent);
+  color: rgba(248, 249, 250, 0.9);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.cert-list li:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateX(5px);
+}
+
+@media (max-width: 968px) {
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .education-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}

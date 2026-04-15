@@ -1,0 +1,118 @@
+.skills {
+  background: var(--gradient-2);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.skill-category h3 {
+  font-size: 1.5rem;
+  color: var(--gold-accent);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  color: var(--gold-accent);
+}
+
+.skill-name {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--soft-white);
+}
+
+.skill-percentage {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--light-gold);
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--gradient-gold);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.expertise-section {
+  text-align: center;
+  padding: 40px;
+  background: rgba(26, 26, 46, 0.4);
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.expertise-section h3 {
+  font-size: 2rem;
+  color: var(--gold-accent);
+  margin-bottom: 30px;
+}
+
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.expertise-tag {
+  padding: 12px 25px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--gold-accent);
+  border-radius: 25px;
+  color: var(--light-gold);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expertise-tag:hover {
+  background: var(--gold-accent);
+  color: var(--navy-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-tag {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

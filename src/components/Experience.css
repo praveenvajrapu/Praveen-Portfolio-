@@ -1,0 +1,158 @@
+.experience {
+  background: var(--royal-black);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: var(--gradient-gold);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  width: calc(50% - 40px);
+}
+
+.timeline-item:nth-child(odd) {
+  margin-left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: auto;
+  text-align: left;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--navy-blue);
+  box-shadow: 0 0 0 8px var(--royal-black), 0 0 30px rgba(212, 175, 55, 0.5);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -70px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -70px;
+}
+
+.timeline-content {
+  padding: 30px;
+}
+
+.timeline-header h3 {
+  font-size: 1.5rem;
+  color: var(--gold-accent);
+  margin-bottom: 10px;
+}
+
+.company {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--soft-white);
+  margin-bottom: 5px;
+}
+
+.period {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold-accent);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--light-gold);
+  margin-top: 10px;
+}
+
+.description {
+  margin: 20px 0;
+  line-height: 1.8;
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: rgba(248, 249, 250, 0.85);
+  line-height: 1.6;
+}
+
+.timeline-item:nth-child(odd) .achievements li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--gold-accent);
+  font-size: 1.2rem;
+}
+
+.timeline-item:nth-child(odd) .achievements li::before {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 80px;
+    text-align: left !important;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    margin-left: 0;
+  }
+
+  .timeline-icon {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .timeline-item:nth-child(odd) .achievements li {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  .timeline-item:nth-child(odd) .achievements li::before {
+    left: 0;
+    right: auto;
+  }
+}
