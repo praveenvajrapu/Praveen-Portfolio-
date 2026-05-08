@@ -82,13 +82,13 @@ const Hero = () => {
           <a href="https://github.com/praveenvajrapu" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/praveenvajrapu" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://www.linkedin.com/in/praveen-vajrapu-5533a8284/" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaLinkedin />
           </a>
           <a href="mailto:Praveenvajrapu02@gmail.com" className="social-icon">
             <FaEnvelope />
           </a>
-          <a href="/resume.pdf" download className="social-icon">
+          <a href="/resume%20(2).pdf" download className="social-icon">
             <FaFileDownload />
           </a>
         </motion.div>

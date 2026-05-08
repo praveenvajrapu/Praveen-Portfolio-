@@ -22,7 +22,7 @@ const Contact = () => {
             <ul className="contact-list">
               <li><FaMapMarkerAlt /> Rachagumadam, Vizianagaram, Andhra Pradesh — 532127</li>
               <li><FaEnvelope /> <a href="mailto:Praveenvajrapu02@gmail.com">Praveenvajrapu02@gmail.com</a></li>
-              <li><FaLinkedin /> <a href="https://linkedin.com/in/praveenvajrapu" target="_blank" rel="noopener noreferrer">linkedin.com/in/praveenvajrapu</a></li>
+              <li><FaLinkedin /> <a href="https://www.linkedin.com/in/praveen-vajrapu-5533a8284/" target="_blank" rel="noopener noreferrer">linkedin.com/in/praveen-vajrapu-5533a8284</a></li>
               <li><FaGithub /> <a href="https://github.com/praveenvajrapu" target="_blank" rel="noopener noreferrer">github.com/praveenvajrapu</a></li>
               <li><FaPhone /> +91 9030353878</li>
             </ul>
