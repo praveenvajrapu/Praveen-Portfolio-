@@ -88,7 +88,7 @@ const Hero = () => {
           <a href="mailto:Praveenvajrapu02@gmail.com" className="social-icon">
             <FaEnvelope />
           </a>
-          <a href="/resume%20(2).pdf" download className="social-icon">
+          <a href="/vajrapu%20Praveen.pdf" download className="social-icon">
             <FaFileDownload />
           </a>
         </motion.div>
